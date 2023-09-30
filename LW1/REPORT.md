@@ -1,144 +1,209 @@
-# Отчёт по лабораторной работе №1
+# Отчет по лабораторной работе № 1
+## по курсу "Прикладная математика и информатика"
 
----
+Студент группы М8О-108Б-23 Нургалиев Даниэль Ильдарович
 
-## по курсу "Фундаментальная информатика"
+Работа выполнена 
 
+Преподаватель: каф. 806 Севастьянов Виктор Сергеевич
 
-Студент группы М8О-108Б-23 Романов Вадим Михайлович  
+1. **Тема**: Git, Github, Gitlab
+2. **Цель работы**: Изучить основы Git
+3. **Задание**: 
+- завести репозиторий (**общий под все лабораторные работы с отдельной папкой под каждую лр!**)
+- отчет с листингом в Markdown (листинг - ctrl+c -> ctrl+v из терминала с форматированием в markdown)
+- создать отдельную ветку в репозитории под задание
+- создать коммит с листингом и отчетом
+- смержить ветку в мейн
+4. **Идея, метод, алгоритм решения задачи**: 
+- скачать git
+- завести репозиторий
+- свзяать его с удалённым
+- создать ветку
+- смержить её  с веткой master
+5. **Сценарий выполнения работы**: выполнить команды, проверить результат
+6. **Протокол**: 
+```
+rombica@DESKTOP-C383C55 MINGW64 ~
+$ pwd
+/c/Users/rombica
 
-Работа выполнена  
+rombica@DESKTOP-C383C55 MINGW64 ~
+$ mkdir GIT-projekt
 
-Преподаватель: каф. 806 Севастьянов Виктор Сергеевич  
+rombica@DESKTOP-C383C55 MINGW64 ~
+$ cd GIT-projekt && git init
+Initialized empty Git repository in C:/Users/rombica/GIT-projekt/.git/
 
-    1. Тема: Git, Github, Gitlab etc  
-    2. Цель работы: завести репозиторий в Github и научиться создавать и мержить ветки  
-    3. Задание:  
-       1) завести репозиторий (общий под все лабораторные работы с отдельной папкой под каждую лр!)  
-       2) отчет с листингом в Markdown (листинг - ctrl+c -> ctrl+v из терминала с форматированием в markdown)  
-       3) создать отдельную ветку в репозитории под задание  
-       4) создать коммит с листингом и отчетом  
-       5) смержить ветку в мейн  
-    4. Идея, метод, алгоритм решения задачи:  
-        1) Установка на компьютер Git  
-        2) Создание в диске D новой папки, где будут находиться все репозитории, через командную строку Git  
-        3) Создание папок под все лабораторные работы, настоящие и будущие, также через командную строку  
-        4) Создание первого отчёта с листингом в Markdown, где отображены действия из пункта 2 и 3  
-        5) Создание новой ветки new-task в репозитории под новые задания  
-        6) Создание коммита с листингом и отчётом обо всех моих действиях со 2 по 5 пункт вместе с помещением данного отчёта в коммит  
-        7) Соединить ветку new-task с веткой main  
-    5. Сценарий выполнения работы:  
-        Мои команды в Git-е в совокупности должны были создать репозиторий, необходимые папки, а также провести некоторые операции с ветками. Вот список используемых мною команд:  
-            |----------------------|-------------------------------|  
-            |"cd <название папки>" | "переход в определённую папку"|  
-            |"mkdir <название папки>" | "создать папку"|  
-            |"git init" | "создать репозиторий"|  
-            |"git add <название файла>" | "подготовка файлов к сохранению"|  
-            |"git commit -m''" | "содать коммит с сообщением"|  
-            |"git push" | "связать локальный и удалённый репозитории"|  
-            |"git branch" | "создать новую ветку"|  
-            |"touch <название файла>" | "создать файл"|  
-            |"git checkout <название ветки>" | "переход на другую ветку"|  
-            |"git merge <название ветки>" | "мерженье веток"|  
-    6. Протокол:  
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt (master)
+$ mkdir LW1 LW2 LW3 LW4 LW5 LW6 LW7 LW8 LW9 LW10 LW11 LW12 LW13 LW14 LW15
 
-```bash
-vadim@HuaweiRomanov MINGW64 ~
-$ cd /d/Github
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt (master)
+$ ls
+LW1/  LW10/  LW11/  LW12/  LW13/  LW14/  LW15/  LW2/  LW3/  LW4/  LW5/  LW6/  LW7/  LW8/  LW9/
 
-vadim@HuaweiRomanov MINGW64 /d/Github
-$ mkdir Laboratory-works
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt (master)
+$ cd LW1
 
-vadim@HuaweiRomanov MINGW64 /d/Github
-$ cd Laboratory-works
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt/LW1 (master)
+$ ls
+REPORT.md
 
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works
-$ git init
-Initialized empty Git repository in D:/Github/Laboratory-works/.git/
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt/LW1 (master)
+$ cd ..
 
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works (master)
-$ mkdir LW1
-
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works (master)
-$ mkdir LW2 LW3 LW4 LW5
-
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works (master)
-$ mkdir LW6 LW7 LW8 LW9 LW10 LW11 LW12 LW13 LW14 LW15
-
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works (master)
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt (master)
 $ git add --all
 
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works (master)
-$ git commit -m'Связать локальный и удалённый репозитории'
-On branch master
-nothing to commit, working tree clean
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt (master)
+$ git commit -m 'Первая лаба изменена'
+[master (root-commit) 737ef0f] Первая лаба изменена
+ 1 file changed, 144 insertions(+)
+ create mode 100644 LW1/REPORT.md
 
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works (master)
-$ git remote add origin git@github.com:vadimromanov05/Laboratory-works.git
-error: remote origin already exists.
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt (master)
+$ cd ~
 
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works (master)
+rombica@DESKTOP-C383C55 MINGW64 ~
+$ ls -la .ssh/
+total 23
+drwxr-xr-x 1 rombica 197121    0 Sep 30 20:58 ./
+drwxr-xr-x 1 rombica 197121    0 Sep 30 22:04 ../
+-rw-r--r-- 1 rombica 197121  432 Sep 25 09:58 id_ed25519
+-rw-r--r-- 1 rombica 197121  112 Sep 25 09:58 id_ed25519.pub
+-rw-r--r-- 1 rombica 197121 1098 Sep 25 10:02 known_hosts
+-rw-r--r-- 1 rombica 197121  362 Sep 25 10:02 known_hosts.old
+
+rombica@DESKTOP-C383C55 MINGW64 ~
+$ rm -rf ~/.ssh
+
+rombica@DESKTOP-C383C55 MINGW64 ~
+$ ls -la .ssh/
+ls: cannot access '.ssh/': No such file or directory
+
+rombica@DESKTOP-C383C55 MINGW64 ~
+$ ssh-keygen -t ed25519 -C "daniel.nurgaliev2005@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/rombica/.ssh/id_ed25519):
+Created directory '/c/Users/rombica/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/rombica/.ssh/id_ed25519
+Your public key has been saved in /c/Users/rombica/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:XUyt3zRJUzouNZVe9/Ddcm+912WLOkFMHngRJ9xkM+k daniel.nurgaliev2005@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|          o+*B. =|
+|         . B+o=*o|
+|          = =.BoO|
+|         . =.E.*B|
+|        S o ...=+|
+|           . .. B|
+|            . .o=|
+|           . . oo|
+|           .o   .|
++----[SHA256]-----+
+
+rombica@DESKTOP-C383C55 MINGW64 ~
+$ ls -a ~/.ssh
+./  ../  id_ed25519  id_ed25519.pub
+
+rombica@DESKTOP-C383C55 MINGW64 ~
+$ clip < ~/.ssh/id_ed25519.pub
+
+rombica@DESKTOP-C383C55 MINGW64 ~
+$ ssh -T git@github.com
+The authenticity of host 'github.com (140.82.121.3)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Hi Dane4ka-in-IT! You've successfully authenticated, but GitHub does not provide shell access.
+
+rombica@DESKTOP-C383C55 MINGW64 ~
+$ cd GIT-projekt
+
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt (master)
+$ git remote add origin git@github.com:Dane4ka-in-IT/LAB2.git
+
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt (master)
+$ git remote -v
+origin  git@github.com:Dane4ka-in-IT/LAB2.git (fetch)
+origin  git@github.com:Dane4ka-in-IT/LAB2.git (push)
+
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt (master)
 $ git push -u origin master
+
 Enumerating objects: 4, done.
 Counting objects: 100% (4/4), done.
 Delta compression using up to 8 threads
 Compressing objects: 100% (2/2), done.
-Writing objects: 100% (4/4), 517 bytes | 172.00 KiB/s, done.
+Writing objects: 100% (4/4), 2.74 KiB | 2.74 MiB/s, done.
 Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
-To github.com:vadimromanov05/Laboratory-works.git
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/Dane4ka-in-IT/LAB2/pull/new/master
+remote:
+To github.com:Dane4ka-in-IT/LAB2.git
  * [new branch]      master -> master
 branch 'master' set up to track 'origin/master'.
 
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works (master)
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt (master)
 $ git add --all
 
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works (master)
-$ git commit -m'Внести последние изменения в markdown'
-[master f5cdf89] Внести последние изменения в markdown
- 1 file changed, 25 insertions(+)
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt (master)
+$ git commit -m 'загрузка'
+[master 4c2ca0a] загрузка
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works (master)
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt (master)
 $ git push
 Enumerating objects: 7, done.
 Counting objects: 100% (7/7), done.
 Delta compression using up to 8 threads
 Compressing objects: 100% (2/2), done.
-Writing objects: 100% (4/4), 913 bytes | 913.00 KiB/s, done.
-Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
-To github.com:vadimromanov05/Laboratory-works.git
-   b5ec11b..f5cdf89  master -> master
+Writing objects: 100% (4/4), 330 bytes | 330.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Dane4ka-in-IT/LAB2.git
+   737ef0f..4c2ca0a  master -> master
 
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works (master)
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt (master)
 $ git branch new-task
 
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works (master)
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt (master)
 $ git checkout new-task
 Switched to branch 'new-task'
 
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works (new-task)
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt (new-task)
 $ cd LW1
 
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works/LW1 (new-task)
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt/LW1 (new-task)
 $ touch report.md
 
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works/LW1 (new-task)
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt/LW (new-task)
 $ touch report.md
 
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works/LW1 (new-task)
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt/LW (new-task)
+$ git checkout master
+
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt/LW (new-task)
 $ git add --all
 
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works/LW1 (new-task)
-$ git commit -m'Отправить финальную версию отчёта'
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt/LW (new-task)
+$ git commit -m 'Оформление в стиле markdown'
 
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works/LW1 (new-task)
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt/LW (new-task)
 $ git push
 
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works/LW1 (new-task)
-$ git checkout main
-
-vadim@HuaweiRomanov MINGW64 /d/Github/Laboratory-works/LW1 (main)
-$ git merge new-task
 ```
-
-    7. Замечания автора: Считаю, что объяснения к данной работе необходимо было давать на основе данных Яндекс Практикума. Только в этом курсе есть более-менее исчерпывающие данные касательно темы лабораторной работы.  
-    8. Выводы: Данная лабораторная работа была сущим кошмаром, но дальше будет ещё хуже. Учиться работать в Git необходимо в Яндекс Практикуме, а не в Московском авиационном институте, дабы сберечь здоровье. Всё мучительное обучение, возможно, в каком-то смысле и было очень интересно. В любом случае, за эти несколько дней я хотя бы понял, что такое Git, чем он отличается от Github, узнал базовые команды, и за всё это спасибо Яндексу. Теперь я знаю, что там можно хоть чему-то научиться.
+7. **Выводы**: Я научился создавать репозитории, связывать локальные и удалённые репозитории, создавать ветки и мержить их. Также я оформил отчёт в стиле markdown
