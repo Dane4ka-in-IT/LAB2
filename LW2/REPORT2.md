@@ -435,4 +435,78 @@ rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt/LW2 (master)
 $ echo Я СДЕЛАЛ ВТОРУЮ ЛАБУ ПО $VAR
 Я СДЕЛАЛ ВТОРУЮ ЛАБУ ПО GIT
 
+rombica@DESKTOP-C383C55 MINGW64 ~
+$ cd C:/dir
+
+rombica@DESKTOP-C383C55 MINGW64 /c/dir
+$ ls
+REPORT2.md
+
+rombica@DESKTOP-C383C55 MINGW64 /c/dir
+$ tar czf archive.tar.gz REPORT2.md
+
+rombica@DESKTOP-C383C55 MINGW64 /c/dir
+$ ls
+REPORT2.md  archive.tar.gz
+
+rombica@DESKTOP-C383C55 MINGW64 /c/dir
+$ scp "C:\dir\archive.tar.gz" d_nurgaliev@185.5.249.140:~
+C:\dir\archive.tar.gz                                                                                                                                                           100% 5445   567.2KB/s   00:00
+
+rombica@DESKTOP-C383C55 MINGW64 /c/dir
+$ ssh d_nurgaliev@185.5.249.140
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.4.0-162-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+New release '22.04.3 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Last login: Sun Oct  1 02:48:01 2023 from 85.143.224.39
+d_nurgaliev@vds2476450:~$ cd ~
+d_nurgaliev@vds2476450:~$ ls
+a_file.txt  a_file.txt.save  archives  archive.tar.gz  REPORT2.zip
+d_nurgaliev@vds2476450:~$ rm a_file.txt
+d_nurgaliev@vds2476450:~$ rm a_file.txt.save
+d_nurgaliev@vds2476450:~$ ls
+archives  archive.tar.gz  REPORT2.zip
+d_nurgaliev@vds2476450:~$
+d_nurgaliev@vds2476450:~$ tar xzf archive.tar.gz
+d_nurgaliev@vds2476450:~$ ls
+archives  archive.tar.gz  REPORT2.md  REPORT2.zip
+d_nurgaliev@vds2476450:~$ echo ура
+ура
+d_nurgaliev@vds2476450:~$ exit
+logout
+Connection to 185.5.249.140 closed.
+
+rombica@DESKTOP-C383C55 MINGW64 /c/dir
+$ ls
+REPORT2.md  archive.tar.gz
+
+rombica@DESKTOP-C383C55 MINGW64 /c/dir
+$ rm REPORT2.md
+
+rombica@DESKTOP-C383C55 MINGW64 /c/dir
+$ ls
+archive.tar.gz
+
+rombica@DESKTOP-C383C55 MINGW64 /c/dir
+$ scp.exe d_nurgaliev@185.5.249.140:~/REPORT2.md "C:/dir"
+REPORT2.md                                                                                                                                                                      100%   20KB 953.9KB/s   00:00
+
+rombica@DESKTOP-C383C55 MINGW64 /c/dir
+$ ls
+REPORT2.md  archive.tar.gz
+
+rombica@DESKTOP-C383C55 MINGW64 /c/dir
+$ echo ПОБЕЕЕЕЕЕДААААААААААААА
+ПОБЕЕЕЕЕЕДААААААААААААА
+
+rombica@DESKTOP-C383C55 MINGW64 /c/dir
+$ echo Спасибо за внимание
+Спасибо за внимание
+
 ```
+8. Выводы: В течение 12 часов изучения новых команд я научился: использовать команды "tail" и "head" для чтения файлов, команду "grep" в качестве поискового инструмента, а также совмещать его с командой "history". Применил некоторые флаги к "history". Повторил комнады "cp" и "mv" - копирование и перемещение файлов и дирекорий в локальной машине. Были изучены команды "scp", "ssh","ssh-keygen", "ssh-copy-id", благодаря чему научился работать с удалённой машиной. Более того, научился архивировать файлы, отправлять их в удалённую машину, там разаархивировать и скачать на свою машину.
