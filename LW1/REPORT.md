@@ -196,14 +196,26 @@ $ touch report.md
 rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt/LW (new-task)
 $ git checkout master
 
-rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt/LW (new-task)
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt (master)
 $ git add --all
 
-rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt/LW (new-task)
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt (master)
 $ git commit -m 'Оформление в стиле markdown'
+[master 8aa2151] Оформление в стиле markdown
+ 1 file changed, 171 insertions(+), 106 deletions(-)
 
-rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt/LW (new-task)
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt (master)
 $ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 2.88 KiB | 2.88 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Dane4ka-in-IT/LAB2.git
+   4c2ca0a..8aa2151  master -> master
+
+rombica@DESKTOP-C383C55 MINGW64 ~/GIT-projekt (master)
 
 ```
 7. **Выводы**: Я научился создавать репозитории, связывать локальные и удалённые репозитории, создавать ветки и мержить их. Также я оформил отчёт в стиле markdown
