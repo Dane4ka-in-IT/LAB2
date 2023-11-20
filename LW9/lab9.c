@@ -3,22 +3,14 @@
 #include <math.h>
 
 int min(int x, int y) {
-    if (x < y) {
-        return x;
-    } else {
-        return y;
-    }
+    return (x < y) ? x : y;
 }
 
 int max(int x, int y) {
-    if (x > y) {
-        return x;
-    } else {
-        return y;
-    }
+    return (x > y) ? x : y;
 }
 
-int mod(int a, int b){
+int mod(int a, int b) {
     return a - floor(a / b) * b;
 }
 
@@ -48,19 +40,13 @@ int main() {
         l = mod(i, 30) - mod(j, 30) + mod(l, 30) - mod(k, 30);
 
         if (inArea(i, j)) {
+            printf("Точка %d: (%d, %d)\n", k, i, j);
             hit = k;
-            break;
         }
     }
 
-    if (hit != -1) {
-        printf("попал в %d\n", hit);
-    } else {
-        printf("промах\n");
-    }
-
-    printf("конечные: %d %d\n", i, j);
-    printf("динам. параметр: %d\n", l);
+    printf("Время окончания движения: %d\n", hit);
+    printf("Значение динамического параметра: %d\n", l);
 
     return 0;
 }
