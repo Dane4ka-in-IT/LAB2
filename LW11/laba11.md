@@ -97,12 +97,10 @@ int main(void) {
     }
 }
 int isIncreasingInLexOrder(char* str) {
-    char prevChar = '\0'; // Initialize prevChar with a character outside the valid range
+    char prevChar = '\0';
 
     while (*str) {
         char currentChar = *str;
-
-        // Check if characters are in increasing order
         if (currentChar <= prevChar) {
             return 0;
         }
