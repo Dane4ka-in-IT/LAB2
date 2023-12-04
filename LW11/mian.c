@@ -9,9 +9,7 @@ typedef enum _kState {
     BADNUM
 } kState;
 
-int isSpace(int ch);
 int isPartOfNumber(int ch);
-void addFinal(int ***dynamicArray, int *newArray, int *size);
 void addCharacter(char **str, char ch);
 void appendElement(char ***array, const char *newElement, int *size);
 int isIncreasingInLexOrder(char* str);
@@ -106,8 +104,4 @@ void addCharacter(char **str, char ch) {
 
 int isPartOfNumber(int ch) {
     return ((ch >= '0' && ch <= '9') || ch == '-' || ch == '-' || ch == 'A');
-}
-
-int isSpace(int ch) {
-	return (ch == ' ' || ch == ',' || ch == '\t');
 }
