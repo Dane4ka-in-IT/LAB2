@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.27)  27 NOV 2023 10:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.27)  27 NOV 2023 10:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -718,9 +718,9 @@ Here is how much of TeX's memory you used:
  29037 multiletter control sequences out of 15000+600000
  567784 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,11n,79p,528b,233s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 71i,11n,79p,526b,233s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\rombica\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1095.pk> <C:\Users\rombica\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1095.pk><C:/Users/rombica/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/rombica/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/rombica/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/rombica/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/rombica/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 6011.pdf (1 page, 76225 bytes).
+Output written on 6011.pdf (1 page, 76185 bytes).
 PDF statistics:
  110 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

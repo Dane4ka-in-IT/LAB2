@@ -42,6 +42,7 @@ int main() {
         if (inArea(i, j)) {
             printf("Точка %d: (%d, %d)\n", k, i, j);
             hit = k;
+            break;
         }
     }
 
