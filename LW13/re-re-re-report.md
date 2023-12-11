@@ -22,46 +22,61 @@
 5. "Протокол":
 ```
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdbool.h>
+#include <ctype.h>
 
+bool isVowel(char c){
+    char lower_c = tolower(c);
+    return lower_c == 'a' || lower_c == 'e' || lower_c == 'i' || lower_c == 'o' || lower_c == 'u';
+}
 
-#include <windows.h>
-#include <locale.h>
-#include <wchar.h>
+bool isConsonant(char c){
+    return isalpha(c) && !isVowel(c);
+}
 
-int main() {
+bool isVoiced(char c){
+    char lower_c = tolower(c);
+    return lower_c == 'b' || lower_c == 'd' || lower_c == 'g' || lower_c == 'j' || lower_c == 'l' || lower_c == 'm' || lower_c == 'n' || lower_c == 'r' || lower_c == 'v' || lower_c == 'w' || lower_c == 'z';
+}
 
-    SetConsoleCP(1251); 
-    SetConsoleOutputCP(1251); 
-    setlocale(LC_ALL, "ru_RU.UTF-8");
+void checkWord(bool word_has_voiced_consonant, bool word_has_unvoiced_consonant, bool *found){
+    if(word_has_voiced_consonant && !word_has_unvoiced_consonant){
+        *found = true;
+    }
+}
 
+int main(){
+    bool word_has_unvoiced_consonant = false;
+    bool word_has_voiced_consonant = false;
+    bool found = false;
     char c;
-    int has_sonorous_consonant = 1;
-    int final_sonorous = 0;
-    const char *sonorous_consonants = "БВГДЖЗЙЛМНРбвгджзйлмнр"; 
-    const char *blacklisted = "АЕЁИОУЫЭЮЯЬЪаеёиоуыэюяьЪ"; 
 
-    while ((c = getchar()) != '\x04') { 
- 
-        if (c == ' ' || c == '\t' || c == '\n' || c == ',' || c == ';') {
-            if (has_sonorous_consonant) { 
-                final_sonorous = 1; 
+    printf("words:\n");
+
+    while ((c = getchar()) != EOF){
+        if(isConsonant(c)){
+            if(isVoiced(c)){
+                word_has_voiced_consonant = true;
+            } else {
+                word_has_unvoiced_consonant = true;
             }
-            has_sonorous_consonant = 1; 
-        } else if (!(strchr(sonorous_consonants, (int)c) != NULL)) { 
-            if (!(strchr(blacklisted, (int)c) != NULL)) { 
-                
-                has_sonorous_consonant = 0; 
-            }
+        }
+
+        if(c == ' ' || c == '\n' || c == '\t' || c == ','){
+            checkWord(word_has_voiced_consonant, word_has_unvoiced_consonant, &found);
+            word_has_unvoiced_consonant = false;
+            word_has_voiced_consonant = false;
         }
     }
 
-    if (final_sonorous) {
-        printf("Существует слово, в котором все согласные - звонкие.\n");
-    } else {
-        printf("Не существует слова, в котором все согласные - звонкие.\n");
-    }
+    checkWord(word_has_voiced_consonant, word_has_unvoiced_consonant, &found);
 
+    if(found) {
+        printf("yes\n");
+    } else {
+        printf("no\n");
+    }
+    
     return 0;
 }
 ```
