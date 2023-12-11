@@ -4,6 +4,9 @@ int main() {
     int matrix[7][7];
     int n;
     scanf("%d", &n);
+    if (n == 0) {
+        return 0;
+    }
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             scanf("%d", &matrix[i][j]);
@@ -13,7 +16,7 @@ int main() {
     int rot = 0;
     int vert2 = n-1;
     int hor2 = n-1;
-    int hor = n-1;
+
     int vert = n-1;
     int vert3;
     int hor3;
@@ -21,6 +24,7 @@ int main() {
     int loop = 0;
     printf("%d ", matrix[vert2][hor2]);
     int prints = 1;
+    // (；￣Д￣)
     while (loop <= n) {
         loop++;
         if (prints == n*n) {
@@ -70,7 +74,6 @@ int main() {
                 if (prints == n*n) {
                     return 0;
                 }
-                hor = hor2-i;
             }
             rot = 0;
         }
