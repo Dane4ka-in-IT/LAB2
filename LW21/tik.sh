@@ -7,11 +7,11 @@ help() {
   echo "  ?                  Показать это сообщение и выйти"
 }
 
-# Значения по умолчанию
+
 max_size=4096
 output_file=""
 
-# Обработка аргументов командной строки
+
 while [ "$#" -gt 0 ]; do
   case "$1" in
     --max_size)
@@ -34,14 +34,14 @@ while [ "$#" -gt 0 ]; do
   esac
 done
 
-# Проверка обязательного аргумента
+
 if [[ -z $output_file ]]; then
     echo "Не указан обязательный аргумент: --output_file"
     help
     exit 1
 fi
 
-# Основной код скрипта
+
 
 total_size=0
 
